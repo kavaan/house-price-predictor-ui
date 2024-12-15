@@ -31,7 +31,7 @@ const HouseForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/HousePrediction", formData);
+        const response = await axios.post("https://kashane.onrender.com/api/HousePrediction", formData);
       setPredictedPrice(response.data.predictedPrice);
     } catch (error) {
       console.error("Error predicting the price:", error);
